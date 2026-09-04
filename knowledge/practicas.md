@@ -289,3 +289,39 @@ El curso **se está regrabando entero** — literal: *"ahora mismo estamos regra
 Ads Animados"*, con las actualizaciones incluidas de por vida [M6-L6.1]. Lo recogido aquí es una foto a
 **2026-09-03**. Los nombres de los controles de las interfaces (en particular el selector «Future» de Kling en
 ApiMart) son los que se ven en el vídeo y pueden haber cambiado.
+
+---
+
+## Anexo · dirección entre guion e imagen [ANEXO · no es del curso]
+
+> **Nada de esta sección lleva cita `[M…]` porque no sale del curso.** Es la capa de dirección de la
+> `Fase 2.5` de `proceso.md`. Si contradice algo citado, manda lo citado.
+
+### Por qué no se importa un director audiovisual al uso
+
+Un agente genérico de dirección trae oficio de rodaje real. Con estos modelos, la mitad de ese oficio **empeora**
+el resultado, porque asume un plató, un operador de cámara y un montaje que aquí no existen.
+
+| Lo que trae un director al uso | Por qué no entra aquí |
+|---|---|
+| Dirección en prosa cinematográfica | La fórmula del clip es por ranuras y seca: `CÁMARA + MOVIMIENTO + MICRO-ACCIÓN + GUION + VOZ + ACENTO` [M1-L1.4.1]. El párrafo literario diluye las ranuras |
+| Listas de *negative prompt* / bloques "EVITAR" | El método no usa negativos: usa **positivos incrustados** — `NO TALKING`, `No talking, mouth closed`, `Photorealistic, realistic hands` [M4-L4.1.1] |
+| Cambios de plano dentro de un clip | Un clip es **una** generación desde **una** imagen. Cambiar de plano es otro clip y otra imagen [M3-L3.2] |
+| Movimiento de cámara por espectáculo | Con producto en mano la cámara va **estática, sin excepción** [M4-L4.1.1] |
+| Dirigir tono, ritmo y pausas de cualquier voz | Solo se dirige la voz cuando la pone ElevenLabs [M4-L4.3]. La de Omni sale de las ranuras `VOZ` y `ACENTO` y no se controla |
+| Reescribir el guion para que "suene mejor" | El guion es lo importante del clip; lo negociable es la parte visual [M3-L3.3.3] |
+| Diseñar escenografía, fotografía y composición aparte | Ya son cuatro de los seis bloques del 6C: `Context`, `Cinematic Light`, `Camera`, `Clothing` [M3-L3.2]. Duplicarlo genera dos fuentes de verdad que se contradicen |
+
+### Lo que sí aporta la fase, y no estaba
+
+- **Una biblia de continuidad escrita antes del primer clip.** Las anclas de consistencia se piden clip a clip
+  [M3-L3.2]; nada dice de dónde salen. Escritas una vez y reutilizadas literalmente, el avatar no deriva.
+- **Decidir la ruta de voz antes de escribir nada.** Omni o ElevenLabs cambia qué se puede dirigir.
+- **Una función declarada por clip**, contrastada contra la estructura hook → problema → agitación → mecanismo →
+  demostración → beneficio → CTA [M3-L3.3.3]. Es verificación, no generación: la estructura ya la da El Estratega.
+- **Anotar los gestos que reservan hueco** para una superposición, para que el montaje sepa dónde va [M4-L4.1.1].
+
+### Regla de arbitraje
+
+Si la ficha de dirección y un documento citado dicen cosas distintas, se hace lo citado y **se corrige la ficha**.
+La plantilla es un ayudante de decisión, no una fuente.

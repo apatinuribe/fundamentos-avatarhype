@@ -33,7 +33,9 @@ Este archivo es el mapa. El detalle vive en `references/`; leer solo lo que pide
 
 `assets/` contiene las plantillas listas para rellenar. Copiarlas, no reescribirlas de memoria:
 `prompt-imagen.md`, `prompt-clip.md`, `brief-estratega.md` y `checklist-edicion.md` son del track
-realista; `cadena-animados.md` es la hoja de ruta completa del track animado.
+realista; `cadena-animados.md` es la hoja de ruta completa del track animado. `direccion-clip.md` es la
+única plantilla que **no sale del curso** (va marcada `[ANEXO]`): la biblia de continuidad y la ficha de
+dirección por clip que se rellenan entre el guion y la imagen.
 
 ---
 
@@ -81,6 +83,29 @@ avatar. Cuando proponga ángulos, responder *"elige los tres mejores"*.
 de imagen; el guion alimenta el prompt de vídeo.
 
 Verificar siempre ingredientes, precios y beneficios que escriba el agente: los inventa plausibles.
+
+## Etapa 2.5 · Dirección [ANEXO · no es del curso]
+
+Antes de escribir un solo prompt, decidir. **Esta etapa no sale del curso**: el curso pasa del guion a la imagen
+y resuelve lo visual sobre la marcha. Es una capa añadida y va marcada como tal; si choca con algo de
+`references/`, manda `references/`.
+
+Rellenar `assets/direccion-clip.md`, que produce dos cosas:
+
+- **una biblia de continuidad** por anuncio — avatar, vestuario, set, luz, cámara base, voz, energía y las
+  **3-5 anclas de consistencia**. Se escribe una vez, antes del primer clip, y no se renegocia. Es lo que impide
+  que el avatar derive entre el clip 2 y el clip 5;
+- **una ficha por clip** — función, guion literal, si habla, duración medida contra el guion, si reutiliza la
+  imagen anterior, encuadre, movimiento, micro-acción ya en inglés y entre corchetes, continuidad y salida.
+
+Antes de preguntar nada al usuario, clasificar: **CRÍTICO** (sin eso no se genera: foto de referencia, si habla o
+hay voz en off, si se manipula producto, formato) se pregunta; **IMPORTANTE** se propone con un valor por
+defecto; **OPCIONAL** se decide sin consultar. Preguntar siempre con opciones cerradas y una recomendación.
+
+Los tres límites: **no** escribe el prompt de imagen (eso es el 6C de la etapa 3), **no** escribe el prompt del
+clip (esa es la fórmula de la etapa 4), **no** toca el guion.
+
+→ Qué no importar de un director al uso: `references/practicas.md` § Anexo · dirección entre guion e imagen.
 
 ## Etapa 3 · Imagen
 
@@ -319,6 +344,10 @@ Freepik, Arcads, Wavy y Higgsfield parten de **0,15 US$/imagen**.
 Consolidado de 28 lecciones de dos cursos de la academia: **Avatar Hype Academy** (26 lecciones, track
 realista, referencias `[M1-*]` a `[M4-*]`) y **Creativos Animados** (2 lecciones, track animado, `[M6-*]`).
 Las referencias entre corchetes apuntan a la lección de origen en `sources/`.
+
+**Todo lo marcado `[ANEXO]` no sale del curso**: la Etapa 2.5 y `assets/direccion-clip.md`. Es una capa añadida
+para cerrar la costura entre el guion y la imagen, y por eso no lleva citas. Si contradice algo citado con
+`[M…]`, manda lo citado.
 
 Huecos conocidos: `4.7-ugly-ads` no tiene contenido publicado, así que ese formato no está cubierto. El curso
 de Creativos Animados **se está regrabando entero** (aviso del propio curso): el track animado es una foto a

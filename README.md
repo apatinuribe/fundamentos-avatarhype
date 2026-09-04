@@ -54,12 +54,20 @@ biblioteca/
 skill/
   SKILL.md                la skill de Claude Code, por etapas
   assets/                 plantillas rellenables: prompt de imagen, prompt de clip, brief, checklists
+                          y direccion-clip.md, la única marcada [ANEXO] (no sale del curso)
 ```
 
 ## Trazabilidad
 
 Cada afirmación de `knowledge/` cita su lección de origen entre corchetes: `[M4-L4.1.1]` es módulo 4,
 lección 4.1.1. `[M6-L6.1]` y `[M6-L6.2]` son el curso de animados. Si algo no lleva cita, no sale del curso.
+
+Hay **una sola excepción deliberada**, y va marcada `[ANEXO]` en su propio título: la capa de **dirección**
+entre el guion y la imagen — `Fase 2.5` de `knowledge/proceso.md`, el anexo final de `knowledge/practicas.md`,
+la § 3.5 de `system-prompt.md` y `skill/assets/direccion-clip.md`. El curso pasa del guion directo a la imagen
+y deja lo visual "negociable"; esa capa cierra la costura (continuidad entre clips, qué voz se puede dirigir,
+qué se decide antes de escribir un prompt). **No sale del curso, no lleva citas y si contradice algo citado con
+`[M…]`, manda lo citado.**
 
 ## Lo que no está aquí, a propósito
 

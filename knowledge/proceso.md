@@ -86,6 +86,48 @@ De ahí sale el reparto: la parte visual alimenta el prompt de imagen, el guion 
 
 ---
 
+## Fase 2.5 · Dirección [ANEXO · no es del curso]
+
+> **Esta fase no sale del curso.** El curso pasa del guion directo a la imagen. Es una capa añadida para cerrar
+> la costura entre las dos. No lleva cita `[M…]` porque no la tiene; si contradice algo citado, manda lo citado.
+
+**Por qué existe.** El propio método dice que *"el guion es lo importante de cada clip; la parte visual es
+negociable"* [M3-L3.3.3]. El curso lo deja negociable y lo resuelve sobre la marcha, clip a clip, escribiendo el
+6C y la fórmula del clip a la vez que se decide qué se ve. Eso abre tres huecos:
+
+1. **Continuidad entre clips.** Las anclas de consistencia se piden clip a clip [M3-L3.2] sin que exista un
+   documento anterior que diga cuáles son. Si se reinventan en cada prompt, el avatar deriva.
+2. **Dirección de voz.** En la ruta ElevenLabs la voz se dirige [M4-L4.3]; en la ruta Omni la pone el modelo con
+   las ranuras `VOZ` y `ACENTO` [M1-L1.4.1] y no se dirige. Sin decidir la ruta antes, se dirige lo que no se puede.
+3. **Decidir antes de escribir.** Duración contra el guion, reutilizar o no la imagen, cámara estática por
+   producto en mano: son decisiones, y salen mejor tomadas de golpe que enterradas dentro de un prompt.
+
+**Qué produce.** Dos cosas, y nada más:
+
+- una **biblia de continuidad** por anuncio — se escribe una vez, antes del primer clip, y no se renegocia;
+- una **ficha de dirección por clip**, en orden, empezando por el clip 0.
+
+**Dónde desemboca cada campo.** La fase no escribe prompts: rellena las ranuras que las Fases 3 y 4 ya tienen.
+
+| Campo de la ficha | Ranura destino |
+|---|---|
+| Encuadre | `CÁMARA` |
+| Movimiento de cámara | `MOVIMIENTO` |
+| Micro-acción entre corchetes, en inglés | `MICRO-ACCIÓN` |
+| Guion literal | `GUION` |
+| Voz de la biblia | `VOZ` + `ACENTO` |
+| Avatar, vestuario, set, luz, anclas | los seis bloques del 6C |
+
+**Los tres límites que la fase no puede cruzar:**
+
+- no escribe el prompt de imagen — eso es el 6C de la Fase 3;
+- no escribe el prompt del clip — esa es la fórmula de la Fase 4;
+- no toca el guion.
+
+→ Plantilla: `assets/direccion-clip.md`. Los límites, en `practicas.md` § Anexo · dirección entre guion e imagen.
+
+---
+
 ## Fase 3 · Imagen
 
 ### 3.1 · La referencia

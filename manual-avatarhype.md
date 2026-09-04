@@ -11,6 +11,7 @@ Las referencias entre corchetes (`[M4-L4.1.1]`) apuntan a la leccion de origen e
 - [Fase 0 · Stack](#fase-0--stack)
 - [Fase 1 · Estrategia](#fase-1--estrategia)
 - [Fase 2 · Guion (agente El Estratega)](#fase-2--guion-agente-el-estratega)
+- [Fase 2.5 · Dirección [ANEXO · no es del curso]](#fase-25--dirección-anexo--no-es-del-curso)
 - [Fase 3 · Imagen](#fase-3--imagen)
 - [Fase 4 · Clips](#fase-4--clips)
 - [Fase 5 · Limpieza](#fase-5--limpieza)
@@ -36,6 +37,7 @@ Las referencias entre corchetes (`[M4-L4.1.1]`) apuntan a la leccion de origen e
 - [Errores que salen caros](#errores-que-salen-caros)
 - [Hueco conocido](#hueco-conocido)
 - [Track Animados · reglas y criterios [M6-*]](#track-animados--reglas-y-criterios-m6-)
+- [Anexo · dirección entre guion e imagen [ANEXO · no es del curso]](#anexo--dirección-entre-guion-e-imagen-anexo--no-es-del-curso)
 
 **[Parte 3 - Prompts](#parte-3---prompts)** - Kit operativo: plantillas parametrizadas y menus.
 
@@ -161,6 +163,48 @@ beneficio → CTA** [M3-L3.3.3]. La numeración empieza en 0: el "clip cero" es 
 
 **El guion es lo importante de cada clip; la parte visual es negociable** [M3-L3.3.3].
 De ahí sale el reparto: la parte visual alimenta el prompt de imagen, el guion alimenta el prompt de vídeo.
+
+---
+
+## Fase 2.5 · Dirección [ANEXO · no es del curso]
+
+> **Esta fase no sale del curso.** El curso pasa del guion directo a la imagen. Es una capa añadida para cerrar
+> la costura entre las dos. No lleva cita `[M…]` porque no la tiene; si contradice algo citado, manda lo citado.
+
+**Por qué existe.** El propio método dice que *"el guion es lo importante de cada clip; la parte visual es
+negociable"* [M3-L3.3.3]. El curso lo deja negociable y lo resuelve sobre la marcha, clip a clip, escribiendo el
+6C y la fórmula del clip a la vez que se decide qué se ve. Eso abre tres huecos:
+
+1. **Continuidad entre clips.** Las anclas de consistencia se piden clip a clip [M3-L3.2] sin que exista un
+   documento anterior que diga cuáles son. Si se reinventan en cada prompt, el avatar deriva.
+2. **Dirección de voz.** En la ruta ElevenLabs la voz se dirige [M4-L4.3]; en la ruta Omni la pone el modelo con
+   las ranuras `VOZ` y `ACENTO` [M1-L1.4.1] y no se dirige. Sin decidir la ruta antes, se dirige lo que no se puede.
+3. **Decidir antes de escribir.** Duración contra el guion, reutilizar o no la imagen, cámara estática por
+   producto en mano: son decisiones, y salen mejor tomadas de golpe que enterradas dentro de un prompt.
+
+**Qué produce.** Dos cosas, y nada más:
+
+- una **biblia de continuidad** por anuncio — se escribe una vez, antes del primer clip, y no se renegocia;
+- una **ficha de dirección por clip**, en orden, empezando por el clip 0.
+
+**Dónde desemboca cada campo.** La fase no escribe prompts: rellena las ranuras que las Fases 3 y 4 ya tienen.
+
+| Campo de la ficha | Ranura destino |
+|---|---|
+| Encuadre | `CÁMARA` |
+| Movimiento de cámara | `MOVIMIENTO` |
+| Micro-acción entre corchetes, en inglés | `MICRO-ACCIÓN` |
+| Guion literal | `GUION` |
+| Voz de la biblia | `VOZ` + `ACENTO` |
+| Avatar, vestuario, set, luz, anclas | los seis bloques del 6C |
+
+**Los tres límites que la fase no puede cruzar:**
+
+- no escribe el prompt de imagen — eso es el 6C de la Fase 3;
+- no escribe el prompt del clip — esa es la fórmula de la Fase 4;
+- no toca el guion.
+
+→ Plantilla: `assets/direccion-clip.md`. Los límites, en `practicas.md` § Anexo · dirección entre guion e imagen.
 
 ---
 
@@ -779,6 +823,42 @@ El curso **se está regrabando entero** — literal: *"ahora mismo estamos regra
 Ads Animados"*, con las actualizaciones incluidas de por vida [M6-L6.1]. Lo recogido aquí es una foto a
 **2026-09-03**. Los nombres de los controles de las interfaces (en particular el selector «Future» de Kling en
 ApiMart) son los que se ven en el vídeo y pueden haber cambiado.
+
+---
+
+## Anexo · dirección entre guion e imagen [ANEXO · no es del curso]
+
+> **Nada de esta sección lleva cita `[M…]` porque no sale del curso.** Es la capa de dirección de la
+> `Fase 2.5` de `proceso.md`. Si contradice algo citado, manda lo citado.
+
+### Por qué no se importa un director audiovisual al uso
+
+Un agente genérico de dirección trae oficio de rodaje real. Con estos modelos, la mitad de ese oficio **empeora**
+el resultado, porque asume un plató, un operador de cámara y un montaje que aquí no existen.
+
+| Lo que trae un director al uso | Por qué no entra aquí |
+|---|---|
+| Dirección en prosa cinematográfica | La fórmula del clip es por ranuras y seca: `CÁMARA + MOVIMIENTO + MICRO-ACCIÓN + GUION + VOZ + ACENTO` [M1-L1.4.1]. El párrafo literario diluye las ranuras |
+| Listas de *negative prompt* / bloques "EVITAR" | El método no usa negativos: usa **positivos incrustados** — `NO TALKING`, `No talking, mouth closed`, `Photorealistic, realistic hands` [M4-L4.1.1] |
+| Cambios de plano dentro de un clip | Un clip es **una** generación desde **una** imagen. Cambiar de plano es otro clip y otra imagen [M3-L3.2] |
+| Movimiento de cámara por espectáculo | Con producto en mano la cámara va **estática, sin excepción** [M4-L4.1.1] |
+| Dirigir tono, ritmo y pausas de cualquier voz | Solo se dirige la voz cuando la pone ElevenLabs [M4-L4.3]. La de Omni sale de las ranuras `VOZ` y `ACENTO` y no se controla |
+| Reescribir el guion para que "suene mejor" | El guion es lo importante del clip; lo negociable es la parte visual [M3-L3.3.3] |
+| Diseñar escenografía, fotografía y composición aparte | Ya son cuatro de los seis bloques del 6C: `Context`, `Cinematic Light`, `Camera`, `Clothing` [M3-L3.2]. Duplicarlo genera dos fuentes de verdad que se contradicen |
+
+### Lo que sí aporta la fase, y no estaba
+
+- **Una biblia de continuidad escrita antes del primer clip.** Las anclas de consistencia se piden clip a clip
+  [M3-L3.2]; nada dice de dónde salen. Escritas una vez y reutilizadas literalmente, el avatar no deriva.
+- **Decidir la ruta de voz antes de escribir nada.** Omni o ElevenLabs cambia qué se puede dirigir.
+- **Una función declarada por clip**, contrastada contra la estructura hook → problema → agitación → mecanismo →
+  demostración → beneficio → CTA [M3-L3.3.3]. Es verificación, no generación: la estructura ya la da El Estratega.
+- **Anotar los gestos que reservan hueco** para una superposición, para que el montaje sepa dónde va [M4-L4.1.1].
+
+### Regla de arbitraje
+
+Si la ficha de dirección y un documento citado dicen cosas distintas, se hace lo citado y **se corrige la ficha**.
+La plantilla es un ayudante de decisión, no una fuente.
 
 ---
 

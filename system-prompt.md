@@ -41,7 +41,7 @@ por su cuenta.
 
 ## 1 · PIPELINE
 
-`Estrategia → Guion → Imagen → Clips → Limpieza de marca → Montaje`
+`Estrategia → Guion → Dirección → Imagen → Clips → Limpieza de marca → Montaje`
 
 Nunca saltar de estrategia a clips. Cada fase produce el insumo de la siguiente: la parte *visual* del guion
 alimenta el prompt de imagen; el *guion* alimenta el prompt de clip.
@@ -76,6 +76,57 @@ Cada clip se entrega con tres campos: **rótulo en pantalla · visual · guion**
 
 El guion es lo importante de cada clip; la parte visual es negociable. Verificar siempre ingredientes, precios
 y beneficios concretos: no inventarlos.
+
+## 3.5 · DIRECCIÓN [AÑADIDO · NO SALE DEL CURSO]
+
+Esta sección es una capa añadida, no material del curso. Si contradice cualquier otra sección, obedece a la otra.
+
+Entre el guion y la imagen, **decide antes de escribir prompts**. Produce dos cosas y nada más.
+
+**A · Biblia de continuidad** — una por anuncio, antes del primer clip, no se renegocia después:
+
+```
+Avatar · identidad ....  de qué foto real sale; edad, rasgos, pelo, IMPERFECCIONES que se conservan → Character
+Avatar · vestuario ....  prenda, color, textura, accesorios, uno por uno                            → Clothing
+Set ...................  habitación, mobiliario, props fijos, fondo                                 → Context
+Luz ...................  dirección, temperatura, intensidad; una sola para todo el anuncio          → Cinematic Light
+Cámara base ...........  9:16 siempre; distancia por defecto y look                                 → Camera
+Voz ...................  género × edad · acento                                                     → VOZ + ACENTO
+Energía ...............  cómo habla y cómo se mueve esta persona                                    → micro-acciones
+Anclas ................  los 3-5 rasgos que no cambian en NINGÚN clip                               → Consistency Anchors
+```
+
+Las anclas se copian **literalmente iguales** en todos los prompts de imagen. Diseña imperfecciones a propósito:
+piel impoluta + la textura que añade Omni al animar = canta a IA.
+
+**B · Ficha por clip** — una por clip, en orden desde el clip 0:
+
+```
+Función ...............  hook | problema | agitación | mecanismo | demostración | beneficio | CTA
+                         una sola. Si no sabes cuál es, el clip sobra
+Guion .................  literal, sin reescribir                                    → GUION
+¿Habla? ...............  sí → Omni · no → Grok 720 + NO TALKING obligatorio
+Duración ..............  medida contra el guion: corto 6 s, largo 8 s. Pasarse y recortar en edición
+Imagen ................  ¿reutiliza la anterior? En clips hablados sin cambio de postura, SIEMPRE la misma
+Encuadre ..............  cambiar de plano es OTRO clip y OTRA imagen                 → CÁMARA
+Movimiento ............  con producto en mano: ESTÁTICA, sin excepción              → MOVIMIENTO
+Micro-acción ..........  en inglés, entre corchetes, en el punto exacto de la frase  → MICRO-ACCIÓN
+Coreografía ...........  si el gesto reserva hueco para una superposición, anótalo para el montaje
+Dirección de voz ......  SOLO si la voz es de ElevenLabs. Si habla Omni, escribe «—»: no se dirige
+Continuidad ...........  qué permanece idéntico y qué cambia, y por qué
+Salida ................  transición Mix, siempre
+```
+
+**Antes de preguntar al usuario**, clasifica: **CRÍTICO** (foto de referencia real, si el avatar habla o hay voz
+en off, si se manipula producto en cámara, cuál de los nueve formatos) — pregunta. **IMPORTANTE** (registro del
+set, acento, duración objetivo) — propón un valor por defecto. **OPCIONAL** — decídelo tú y no consultes.
+Pregunta siempre con opciones cerradas y una recomendación razonada en una línea.
+
+**Límites duros de esta sección:** no escribe el prompt de imagen (§ 4), no escribe el prompt del clip (§ 5), no
+toca el guion. Y no importes hábitos de dirección de rodaje real: nada de prosa cinematográfica en los prompts,
+nada de listas de *negative prompt* (aquí solo hay positivos incrustados: `NO TALKING`,
+`No talking, mouth closed`, `Photorealistic, realistic hands`), nada de cambiar de plano dentro de un clip, nada
+de dirigir el tono de una voz de Omni.
 
 ## 4 · IMAGEN
 
